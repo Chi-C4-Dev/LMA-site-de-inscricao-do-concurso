@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Inscritos</title>
+    <link rel="stylesheet" type="text/css" href="/staticcss/bootstrap.css" />
+
+    <link href="https://icons.getbootstrap.com/icons/whatsapp/" rel="stylesheet">
+    
+    <!-- fonts style -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  
+    <!--owl slider stylesheet -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  
+    <!-- font awesome style -->
+    <link th:href="@{/css/font-awesome.min.css}" rel="stylesheet" />
+  
+    <!-- Custom styles for this template -->
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <!-- responsive style -->
+    <link th:href="@{/css/responsive.css}" rel="stylesheet" />
+
+  <style>
+
+    body{
+        background-color: white;
+    }
+  </style>
+</head>
+<body>
+    <header class="header_section">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" th:href="@{/lma/}">
+              <span>
+                LMA
+              </span>
+            </a>
+  
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
+  
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" th:href="@{/lma/}">Home <span class="sr-only">(current)</span></a>
+                </li>
+               
+        
+              
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <br>  
+    
+      <hr>
+       <br>
+      <div class=" " >
+        <div class="form-signin">
+           
+             
+              <h4 class="h3 mb-3 fw-normal" style="margin-left: 30px;">Competidores Inscritos</h4>
+              <div class="bd row" style="overflow-x: scroll; height: 60%;">
+                <table class="table table-striped col-md-8 col-sm-8 col-lg-8" style="margin-left: 30px; width: 80%; margin-right: 20px;">
+                  <thead>
+                  <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">Nome Completo</th>
+                    <th scope="col">Genero</th>
+                    <th scope="col">Endereço de Moradia</th>
+                    <th scope="col">Nível Académico</th>
+                    <th scope="col">Instituição</th>
+                    <th scope="col">Ano de Frequência</th>
+                    <th scope="col">Número de whatsApp</th>
+                    <th scope="col">Número de telefone</th>
+                    <th scope="col">Data de inscrição</th>
+
+                    <th scope="col">Opções</th>
+                    
+                  </tr>
+                  </thead>
+                  <tbody>
+                    <tr th:if="${estudante.empty}">
+                      <td colspan="2"> Nenhum inscrito ainda... </td>
+                  </tr>
+                  <tr data-th-each="estudante: ${estudante}">
+                   
+                    <td data-th-text="${estudante.id}"></td>
+                    <td data-th-text="${estudante.name}"></td>
+                    <td data-th-text="${estudante.genero}"></td>
+                    <td data-th-text="${estudante.morada}"></td>
+                    <td data-th-text="${estudante.nivel}"></td>
+                    <td data-th-text="${estudante.escola}"></td>
+                    <td data-th-text="${estudante.ano}"></td>
+                    <td data-th-text="${estudante.whatsapp}"></td>
+                    <td data-th-text="${estudante.tel}"></td>
+                    <td data-th-text="${{estudante.createdAt}}"></td>
+                    <td> <a th:href="@{/lma/inscritos/delete/{id} (id=${estudante.id})}" class="btn btn-primary"><i class="fas fa-user-edit ml-2">Deletar</i></a> </td>
+                    
+                  </tr>
+                  </tbody>
+                </table>
+         
+        </div>
+
+      </div>
+</body>
+</html>

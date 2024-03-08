@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>link para whatsApp</title>
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link th:href="@{/css/style.css}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link th:href="@{/css/responsive.css}" rel="stylesheet" />
+
+    <style>
+        /* Estilo para o botão flutuante */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+   
+    <header class="header_section">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" th:href="@{/lma/}">
+              <span>
+                LMA
+              </span>
+            </a>
+  
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
+  
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" th:href="@{/lma/}">Home <span class="sr-only">(current)</span></a>
+                </li>
+              
+        
+               
+                </form>
+              </ul>
+            </div>
+          </nav>
+        </div>
+    </header>
+    <div class="container"  style="align-items: center; justify-content: center; justify-items: center;">
+        <div class="container col-md-6" style="width: 70%; height: 40%; ">
+
+        
+         <!-- Botão flutuante do WhatsApp -->
+           
+            <a href="https://wa.me/33764492212?text=Certificação de frequencia académica!" class="btn btn-success " style="margin: 0%; float: none;">
+            Enviar documento
+            </a>
+            <p>
+              <br>
+              Envie o documento que comprova sua frequência académica(declaração ou cartão de estudante). <br>
+              <strong>Nota:</strong>O envio do documento que comprove sua frequência deve ser feito dentro de 24h ou sua inscrição será cancelada!</p>
+  <!-- Link para enviar mensagem via WhatsApp -->
+  
+        </div>
+    </div>
+      
+   
+<!-- Adicionando Bootstrap JS e jQuery (necessários para alguns componentes do Bootstrap) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+</body>
+</html>

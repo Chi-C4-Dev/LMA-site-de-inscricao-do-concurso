@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+ 
+
+  <title> LMA</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link href="https://icons.getbootstrap.com/icons/whatsapp/" rel="stylesheet">
+    
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- font awesome style -->
+  <link th:href="@{/css/font-awesome.min.css}" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link th:href="@{/css/style.css}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link th:href="@{/css/responsive.css}" rel="stylesheet" />
+
+</head>
+
+<body>
+
+  <div class="hero_area">
+
+    <div class="hero_bg_box">
+      <div class="bg_img_box">
+        <img th:src="@{/images/lma_0.png}" alt="">
+      </div>
+    </div>
+
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" th:href="@{/lma/}">
+            <span>
+              LMA
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+      
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section ">
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-6 ">
+                  <div class="detail-box">
+                    <h1>
+                      Lobito <br>
+                      Mathematics <br>
+                      Awards
+                    </h1>
+                    <p>
+                      A chance de exibir seu talento e amor pela matemática está aqui! O Lobito Mathematics Awards convida você a se inscrever e embarcar em uma jornada estimulante repleta de desafios intelectuais, aprendizado significativo e reconhecimento por suas habilidades excepcionais.
+                    </p>
+                    <div class="btn-box">
+                      <a th:href="@{/lma/formulario}" class="btn1">
+                        Faça sua Inscrição
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="img-box">
+                    <img th:src="@{/images/slider-img010.png}" alt="">
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item ">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-6 ">
+                  <div class="detail-box">
+                    <h1>
+                      Lobito <br>
+                      Mathematics <br>
+                      Awards
+                    </h1>
+                    <p>
+                      A chance de exibir seu talento e amor pela matemática está aqui! O Lobito Mathematics Awards convida você a se inscrever e embarcar em uma jornada estimulante repleta de desafios intelectuais, aprendizado significativo e reconhecimento por suas habilidades excepcionais.
+                     </p>
+                    <div class="btn-box">
+                      <a th:href="@{/lma/formulario}" class="btn1">
+                        Faça sua Inscrição
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="img-box">
+                    <img th:src="@{/images/slider-img010.png}" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <ol class="carousel-indicators">
+          <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+          <li data-target="#customCarousel1" data-slide-to="1"></li>
+          
+        </ol>
+      </div>
+
+    </section>
+    <!-- end slider section -->
+  </div>
+
+
+  <!-- contest section -->
+
+  <section class="service_section layout_padding">
+    <div class="service_container">
+      <div class="container ">
+        <div class="heading_container heading_center">
+          <h2>
+            Sobre o <span>Concurso</span>
+          </h2>
+          <p>
+            Informações essenciais para que você conheça nosso emocionante concurso de Matemática
+        </div>
+        <div class="row">
+          <div class="col-md-4 ">
+            <div class="box ">
+              <div class="img-box">
+                <lord-icon
+                    src="https://cdn.lordicon.com/abfverha.json"
+                    trigger="hover"
+                    style="width:100px;height:100px; ">
+                </lord-icon>
+              </div>
+              <div class="detail-box" style="margin-top:5px;">
+                <h5>
+                  Fases e Data 
+                </h5>
+                <p>
+                  <span>1ª Fase:</span> 
+                  <strong>6 de Abril</strong><br>
+                  <span>2ª Fase:</span>
+                  <strong>13 de Abril</strong><br>
+                  <span>3ª Fase:</span> 
+                  <strong>20 de Abril</strong><br>
+                  <span>Horário:</span>
+                  <strong>14h UTC+1</strong><br>
+                  <span>Local:</span>
+                  <strong>Lobito-bela vista</strong><br>
+                </p>
+               
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ">
+            <div class="box ">
+              <div class="img-box">
+                <lord-icon
+                  src="https://cdn.lordicon.com/vdjwmfqs.json"
+                  trigger="hover"
+                  style="width:100px;height:100px">
+              </lord-icon>
+              </div>
+              <div class="detail-box" style="margin-top:5px;">
+                <h5>
+                  Elegibilidade
+                </h5>
+                <p>
+                  São elegiveis estudantes do ensino médio ou do ensino superior com habilidades matemáticas acima da média. <br>
+                   <strong>Deverão os estudantes apresentar uma certificação de frequência académica</strong>
+                </p>
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ">
+            <div class="box ">
+
+              <div class="img-box">
+                <lord-icon
+                    src="https://cdn.lordicon.com/przqzrpl.json"
+                    trigger="hover"
+                    colors="primary:#0a2e5c,secondary:#104891"
+                    style="width:100px;height:100px">
+                </lord-icon>
+              </div>
+              <div class="detail-box" style="margin-top:5px;">
+                <h5>
+                  Prêmios
+                </h5>
+                <p>
+                  Serão premiados: <br> <br><br> 
+                  <strong>1º Lugar</strong>  <br>
+                  <strong>2º Lugar</strong> 
+                </p>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </section>
+
+  <!-- end contest info section -->
+
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding">
+    <div class="container  ">
+      <div class="heading_container heading_center">
+        <h2>
+          Sobre a  <span>LMA</span>
+        </h2>
+        <p>
+          </p>
+      </div>
+      <div class="row">
+        <div class="col-md-6 ">
+          <div class="img-box">
+            <lord-icon
+                src="https://cdn.lordicon.com/ycfdwxgk.json"
+                trigger="loop"
+                delay="20"
+                colors="primary:#0b10f7,secondary:#ffffff"
+                style="width:500px;height:500px">
+            </lord-icon>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            
+            <p>
+              Sob o lema “impulsionar, promover e valorizar o estudo de ciências exatas na minha cidade”, o Lobito Mathematics Awards nasceu da inspiradora iniciativa da Academia AKM. O Lobito Mathematics Awards orgulhosamente se destaca como uma organização dedicada a inspirar o amor pelo conhecimento e reconhecendo a excelência nas ciências exatas. <br><br>
+         <h3><strong>Quem somos</strong> </h3>  
+        Somos uma iniciativa apaixonada e vibrante sediada no coração do Lobito, Benguela, Angola. Nosso objetivo é claro: organizar competições de ciências exatas que não apenas desafiem mentes curiosas, mas também cultivem um ambiente de aprendizado estimulante. <br><br>
+          <h4><Strong>Objectivo do concurso actual</Strong></h4> <br>
+            Promover o interesse pela matemática e incentivar o desenvolvimento das habilidades matemáticas dos participantes da comunidade.
+      
+            </p>
+           
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+ 
+
+
+  <!-- team section -->
+  <section class="team_section layout_padding">
+    <div class="container-fluid">
+      <div class="heading_container heading_center">
+        <h2 class="" style="color:black;">
+          Nosso <span> Team</span>
+        </h2>
+      </div>
+
+      <div class="team_container">
+        <div class="row">
+          <div class="col-lg-4 col-sm-6">
+            <div class="box ">
+              <div class="img-box">
+                <img th:src="@{/images/CE010.png}" class="img1" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Agostinho Dumbo
+                </h5>
+                <p>
+                  CEO
+                </p>
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <div class="box ">
+              <div class="img-box">
+                <img th:src="@{/images/CO20.png}" class="img1" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Abel Katenda
+                </h5>
+                <p>
+                  CEO
+                </p>
+              </div>
+              
+            </div>
+          </div>
+        
+           <div class="col-lg-4 col-sm-6">
+            <div class="box ">
+              <div class="img-box">
+                <img th:src="@{/images/CEO40.png}" class="img1" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Team geral
+                </h5>
+                <p>
+                  comissão Organizadora
+                </p>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end team section -->
+
+
+  
+
+
+  <!-- info section -->
+
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-6 info_col">
+          <div class="info_contact">
+            <h4>
+              Endereço
+            </h4>
+            <div class="contact_link_box">
+              <a >
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Angola, Benguela, Lobito
+                </span>
+              </a>
+              <a >
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  +244 933 760 019 
+                </span>
+              </a>
+              <a >
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  +244 958 799 623 
+                </span>
+              </a>
+              
+              <a >
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  academiaakm@gmail.com
+                </span>
+              </a>
+
+              <a 
+              href="https://mobile.facebook.com/profile.php?id=61556807491114&lst=100094160917968%3A61556807491114%3A1709496178&eav=Afabx0mAjXexHFg4eqf__MGdxRDTuOr5vGduWpe4mC5MuHOlRLr7-GhQsWgZabVKikA&refid=17&_ft_=encrypted_tracking_data.0AY-CtjblkaHFgXuVPujUbKDdCpSdyMUBlQ6W1K3s7u_tPVcbEv6LsWE9sxB_LL1d8dy7MTrVHPtUSLRzLHCEgJ5ckeC92Y_d5g7QZdXq-ZKrozC7UDO0CHz4LIq85MQyjWqtLOn6IV1KklvBknaH35MrZk5SgigYmJ-Owa0G1H5EIw400KcBNS-tjJlsn15sVn0BEVLwdYR8YCubyMEsHhq8OxRmrwbGm1fzEMa9TemTK1U6UDwNhrv5L9RlsCaYavrqG6AknSssU69hQ23w8DKIDqfu1DbMvH6Zi6iFPyde4Rxkf3XNE888G94RmoiPe70MD6dkaBDQYRDRGwmY7u4h7UvY1zunNbZnw4Wzx8L9TFc2-vo8rP4UL0xeNU_7Kj6rPwip6xcoYhcMlFPa4ZzqfdIPmVueWnPVkth1HvnKMhrxqCi7SJs4TN_zU8NCKefgopZaHtyX9R-PYRhKqOmXWgyx_7Ggc2mMdIX5shxmttW-iXZ6rqGlTSEBt_kUpEG1krW220rEydEQ-sa5mpMD-rfSbvHbfFvUl4c-KDNnDs81-cHdrkk3mmVi5T10lUWfI2hJjyDoecwKrSwMrw-3o7JNW_iiVdUjQwdU_DfGWZzjEID7xV7MdEWcOK753rXGR-2hk-kZypiyiW_SxHtcuzsCOd8HUEvYvjgMhR0OUoyXJSJhI36lejmp_-MkmjqfSfMh8BRYACTuVJ5qti5QrRk4YZlF4X8EMivTqtNuQs8KiLRSp86O6lcE-VmSnXA2uCVOTsizdZEeiMq6sKUH0LHd35KZCPdD71rwZfNCwSi3FCHA9t7qKA8sG3e7E7aEgrIl05DarwjcVtXhRrKqo3d2a21wlcKgrGfxWhHeBhvVO54nCJRsgpbLp4eVzMOWORvAnd5IHhMDP2P1_H6xszeWg1-_aGL48xjBK6mYBywfpzggCQHAaf2b3FUeuyUzXQibx1dOjkDG2iHaZbEZiqmIQBV4AjYu6dFl2hKB9hKQ9dtP9Yco9C4MyPmPGaifzqQ_1wBwOTVHSEJWBHGlQ9i3D9BWNwpmAhiHlnaBXrO0Q3hN0GmORzRWQzcMew51NR2DLoisI18pmR_6YVoPhX1h2CifDt248usOeZFBWsxeqavMIXelRA6oUCveumRnvP77W6Ba2zzRHkD6VAOxmPa-WSjM2_YviH0cKMkRaOuzwZZI8qzq58QW5SKGf_oZ5cc1ZUHbXg5qhB0L6R-rYPhQIKQfLRX-GGtmSTk5ZG0a_QlkbxozFMdylqJJ-0E&__tn__=C-R&paipv=0" 
+              target="_blank"
+              >
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+
+                <span>
+                Academia AKM
+                </span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+       
+      
+              
+           
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </section>
+
+ 
+
+  
+ 
+  <!-- owl slider -->
+  <script src="https://cdn.lordicon.com/lordicon.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- custom js -->
+  <script type="text/javascript" th:src="@{/js/custom.js}"></script>
+  <script type="text/javascript" th:src="@{/js/bootstrap.js}"></script>
+  <script type="text/javascript" th:src="@{/js/jquery-3.4.1.min.js}"></script>
+  <script src="https://cdn.lordicon.com/lordicon.js"></script>
+  <!-- End Google Map -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-bU6GiYJ0gxrj2H34l9z/W5kKZ1D+/mIHP0GX2f2iPC8dd6wv8lFV5RTPG0jDROOz" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy6pNEauMlC1yLq1SF2E70E/RVoP5ab9P" crossorigin="anonymous"></script>
+<script src="https://cdn.lordicon.com/lordicon.js"></script>
+</body>
+
+</html>

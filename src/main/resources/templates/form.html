@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Formulário de Inscrição</title>
+  <!-- Adicionando Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link th:href="@{/css/style.css}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link th:href="@{/css/responsive.css}" rel="stylesheet" />
+  <style>
+    body {
+      background: #0b10f7;
+      color: #ffffff; /* Cor do texto */
+    }
+
+    .container {
+      background-color: white; /* Mudando a cor da div container para a cor de fundo */
+      border-radius: 10px;
+      padding: 15px;
+      margin-top: 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .container h2 {
+      color: #0b10f7; /* Mudando a cor do título para a cor de fundo */
+    }
+
+    .custom-panel {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            align-items: center;
+            justify-content: center;
+            margin-right: 5px;
+            margin-left: 5px;
+            border-radius: 5px;
+            color: black;
+            display: block;
+        }
+
+        .circle {
+            
+            width: 80px;
+            height: 80px;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+          margin-top: 30px;
+            margin-left: 50px;
+        }
+        
+        
+  </style>
+</head>
+<body>
+    <header class="header_section">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" th:href="@{/lma/}">
+              <span>
+                LMA
+              </span>
+            </a>
+  
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
+  
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" th:href="@{/lma/}">Home </a>
+                </li>
+               
+        
+                
+                </form>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+<div class="row" style="align-items: center; justify-content: center; ">
+  <div class="col-ms-1 col-md-1" style="margin-left: 1px;"></div>
+  <div class="col-md-2 col-sm-10 custom-panel">
+  
+    <Strong ><p style="margin-top: 30px; margin-left: 40px;">Vagas Disponibilizadas</p></Strong>
+    <p class="circle">
+    <lord-icon
+        src="https://cdn.lordicon.com/hgngwpjn.json"
+        trigger="loop"
+        delay="1000"
+        stroke="bold"
+        style="width:150px;height:150px; 
+       position: absolute; top:4; "
+        >
+    </lord-icon>
+    16
+   
+      </p>
+      <Strong><p style="margin-top: 50px; margin-left: 40px;" >Vagas Preenchidas</p></Strong>
+    <p class="circle" id="vagasDisponiveis">
+        <!-- Valor dinâmico será inserido aqui via JavaScript -->
+        <span th:text="${total}"></span>
+    </p>
+
+</div>
+
+<div class="container col-md-6">
+  <h2 class="text-center" id="form-titulo" th:unless="${total > 15}">Formulário de Inscrição</h2>
+  <th:block th:include="~{error}"></th:block>
+  <form id="formulario" th:action="@{/lma/formulario}" th:object="${estudante}" method="post" th:unless="${total > 15}" >
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="nomeCompleto">Nome Completo do Estudante:</label>
+        <input type="text" class="form-control" id="name" th:field="*{name}" placeholder="Digite seu nome completo" required>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="nivelEnsino">Nível de Ensino:</label>
+        <input type="text" class="form-control" id="nivel" th:field="*{nivel}" placeholder="Digite seu nível de ensino" required>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-7">
+        <label for="escola">Escola/Instituição:</label>
+        <input type="text" class="form-control"  id="escola" th:field="*{escola}" placeholder="Digite o nome da escola/instituição"  required>
+      </div>
+
+      <div class="form-group col-md-5">
+        <label for="ano">Série ou Ano Letivo:</label>
+        
+        <input type="text" class="form-control" id="ano" th:field="*{ano}" placeholder="Digite a série ou classe" required>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label >Número Telefônico:</label>
+        <input type="text" class="form-control" id="tel" name="tel" placeholder="Digite seu número telefônico 9xxxxxxxx" pattern="[0-9]{9}"  required>
+      </div>
+      <div class="form-group col-md-6">
+        <label>whatsApp</label>
+        <input type="text" class="form-control" id="whatsapp" name="whatsapp" placeholder="Digite seu whatsApp 9xxxxxxxxx" pattern="[0-9]{9}" required>
+      </div>
+
+    </div>
+
+ 
+
+    <div class="form-row">
+        
+      <div class="form-group col-md-6">
+        <label for="genero">Gênero:</label>
+       <select class="form-control" id="genero" th:field="*{genero}" required>
+          <option value="" disabled selected>Selecione o gênero</option>
+          <option value="masculino">Masculino</option>
+          <option value="feminino">Feminino</option>
+          
+        </select>
+      </div> 
+
+      <div class="form-group col-md-6">
+        <label for="endereco">Endereço (Morada):</label>
+        <input type="text" class="form-control" id="endereco" th:field="*{morada}" placeholder="Digite o endereço de moradia" required>
+      </div>
+      
+    </div>
+
+    
+
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+
+  <div id="fimdevagas" class="text-center" th:if="${total > 15 }" >
+    <h2 th:if="${total > 15 }" >Vagas Esgotadas!</h2>
+  </div>
+</div>
+<div class="col-md-3 col-sm-1 "></div>
+</div>
+
+
+<script>
+  /* var totalInsc = /*[[${total}]] null;
+
+     console.log(totalInsc);
+       // Verifique se o número de inscrições atingiu o limite
+       if (totalInsc >= 4) {
+            // Oculte o formulário e exiba a mensagem de vagas esgotadas
+            document.getElementById('formulario').style.display = 'none';
+            document.getElementById('fimdevagas').style.display = 'block';
+        } else {
+            // Caso contrário, mantenha o formulário visível
+            document.getElementById('formulario').style.display = 'block';
+            document.getElementById('fimdevagas').style.display = 'none';
+        }*/
+
+</script>
+
+
+<!-- Adicionando Bootstrap JS e jQuery (necessários para alguns componentes do Bootstrap) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+  </body>
+</html>
