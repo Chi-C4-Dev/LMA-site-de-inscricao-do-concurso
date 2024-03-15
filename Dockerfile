@@ -7,7 +7,7 @@
 FROM maven:3-eclipse-temurin-17 AS build
 COPY . .
 
-RUN apt-get install maven -y
+#RUN apt-get install maven -y
 RUN mvn clean install -Pprod -DskipTests
 
 #FROM openjdk:17-jdk-slim
